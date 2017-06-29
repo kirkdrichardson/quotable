@@ -13,15 +13,16 @@ body{
   height: 50px;
   width: 500px;
   border-style: solid;
-  border-color: #bf9c6e;
   flex-grow: 4;
   margin: 50px;
 }
-.one{
+.board{
   height: 250px;
-  background-color: #595252;
+  background-color: #4b634f;
   border-radius: 5%;
-  border-style:ridge;
+  border-style: ridge;
+  border-bottom-style: groove;
+  border-color: #bf9c6e  #bf9c6e #7b6b6b #bf9c6e;
   border-width: 1em 1em 2em 1em;
 }
 
@@ -29,11 +30,13 @@ body{
   margin: 10vw;
   font-size: 3em;
   text-align: center;
-  color: #d9d9d9;
+  color: #e0c8c8;
 }
 
 .button{
-  border-style: dotted;
   margin: auto;
-  padding: 2em;
+  padding: 1em;
+  background-color: #619861;
+  border-radius: 5%;
+  border-style: double;
 }
