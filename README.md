@@ -1,8 +1,6 @@
 
-<span style='text-align: center'>
 # **Quotable** <br>
 ### A quote machine for condensed wisdom consumers
-</span>
 <br>
 ---
 
