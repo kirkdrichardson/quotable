@@ -7,17 +7,16 @@ body{
   flex-wrap: wrap;
   border: solid 2px burlywood;
   height: 100vm;
-  margin:20px
+  width: 100vm;
+  margin:1em;
+  padding: 1em;
+  text-align: center;
 }
-.item{
-  height: 50px;
-  width: 500px;
-  border-style: solid;
-  flex-grow: 4;
-  margin: 50px;
-}
+
 .board{
-  height: 250px;
+  height: 40vh;
+  width: 100vw;
+  margin: 50px;
   background-color: #4b634f;
   border-radius: 5%;
   border-style: ridge;
@@ -29,14 +28,14 @@ body{
 .text{
   margin: 10vw;
   font-size: 3em;
-  text-align: center;
   color: #e0c8c8;
 }
 
 .button{
   margin: auto;
-  padding: 1em;
+  padding: 1em 3em 1em 3em;
   background-color: #619861;
   border-radius: 5%;
   border-style: double;
+  color:  #e0c8c8;
 }
