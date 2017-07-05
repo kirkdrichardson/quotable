@@ -16,7 +16,7 @@ body{
 .board{
   height: 40vh;
   width: 100vw;
-  margin: 50px;
+  margin: 2em;
   background-color: #4b634f;
   border-radius: 5%;
   border-style: ridge;
@@ -26,16 +26,27 @@ body{
 }
 
 .text{
-  margin: 10vw;
+  display: inline-block;
+  margin: 10vh;
   font-size: 3em;
   color: #e0c8c8;
 }
 
 .button{
+  display: block;
   margin: auto;
   padding: 1em 3em 1em 3em;
-  background-color: #619861;
+  background-color: #499c49;
   border-radius: 5%;
-  border-style: double;
   color:  #e0c8c8;
+  font-size: larger;
+  font-family: sans-serif;
+}
+
+.button:hover{
+  background-color: #1c881c;
+}
+
+.button:active{
+  transform: translateY(8px);
 }
