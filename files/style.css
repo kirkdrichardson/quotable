@@ -1,22 +1,31 @@
-body{
-  background-color: bisque
+body {
+  background-color: bisque;
+  margin: 1%;
+  padding: 1%;
+  overflow: hidden;
 }
 
-.container{
+.container {
   display: flex;
   flex-wrap: wrap;
+
   border: solid 2px burlywood;
-  height: 100vm;
-  width: 100vm;
-  margin:1em;
-  padding: 1em;
+  height: 100%;
+  width: 100%;
   text-align: center;
 }
 
-.board{
-  height: 40vh;
-  width: 100vw;
-  margin: 2em;
+.name {
+  float: right;
+  margin-right: .9em;
+  font-size: .5em;
+  font-family: cursive;
+
+}
+
+.board {
+  margin: 2%;
+  overflow: hidden;
   background-color: #4b634f;
   border-radius: 5%;
   border-style: ridge;
@@ -25,16 +34,16 @@ body{
   border-width: 1em 1em 2em 1em;
 }
 
-.text{
+.text {
   display: inline-block;
-  margin: 10vh;
+  margin: 1%;
   font-size: 3em;
   color: #e0c8c8;
 }
 
-.button{
+.button {
   display: block;
-  margin: auto;
+  margin: 0 auto 2%;
   padding: 1em 3em 1em 3em;
   background-color: #499c49;
   border-radius: 5%;
@@ -43,10 +52,32 @@ body{
   font-family: sans-serif;
 }
 
-.button:hover{
+#elipses {
+  font-size: xx-large;
+}
+
+.button:hover {
   background-color: #1c881c;
 }
 
-.button:active{
+.button:active {
   transform: translateY(8px);
+}
+
+#tweetBtn {
+  background-color: #4275e8;
+}
+
+@media screen and (max-width: 480px) {
+    .text {font-size: 2em;}
+    .board {border-width: .5em .5em 1em .5em;}
+    .button {
+      padding: .5em 1.5em .5em 1.5em;
+      font-size: small;
+      }
+    #elipses {font-size: medium;}
+}
+
+@media screen and (max-width: 360px) {
+  .text {font-size: 1.5em;}
 }

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./files/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./files/script.js"></script>
 </head>
   <body>
     <div class="container">
       <div class = "board">
-        <p class="text">Wow, that's quotable...</p>
+        <div class="text"><p>Often, the most striking and innovative solutions come from realizing that your concept of the problem was wrong.</p><p class="name">- Eric S. Raymond</p></div>
       </div>
-      <button class="button" id="myBtn">Get a new quote</button>
+      <button class="button" id="quoteBtn"><i class="fa fa-quote-left"></i> <span id="elipses">...</span> <i class="fa fa-quote-right"></i></button>
+      <button type="submit" class="button" id="tweetBtn" href="https://twitter.com/intent/tweet"><i class="fa fa-twitter"></i>  Tweet</i></button>
     </div>
     </body>
   </html>

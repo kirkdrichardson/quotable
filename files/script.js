@@ -1,11 +1,29 @@
+
 $(document).ready(function(){
-  var endpoint = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1"
-  $("#newQuote").click(function(){
-    $.getJSON(endpoint, function(json){
-      $(".text").html(JSON.stringify(json));
+  var endpoint = "http://quotes.stormconsultancy.co.uk/random.json";
+  $("#quoteBtn").click(function() {
+    $.getJSON(endpoint, function(json) {
+      $(".text").html(
+        json.quote + "<p class='name'>- " + (json.author)+ "</p>")
+      });
     });
-});
-});
+  });
+
+
+
+
+// $(document).ready(function(){
+//   var endpoint = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+//   $("#myBtn").click(function(){
+//     $("p.text").load(endpoint, function(responseTxt, statusTxt, xhr){
+//       console.log(statusTxt);
+//       if (statusTxt != "success"){
+//         console.log("Error: " + xhr.status + ": " + xhr.statusTxt);
+//       }
+//     });
+//   });
+// });
+
 
 // myBtn styling
 btn = document.getElementById('myBtn');
@@ -34,7 +52,4 @@ btn = document.getElementById('myBtn');
 //   document.getElementById('text').innerHTML = 'HELLO WORLD';
 // }
 
-
-// $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
-//   $("body").append(a[0].content + "<p>— " + a[0].title + "</p>")
 // });
