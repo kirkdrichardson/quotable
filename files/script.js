@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function(){
   getQuote(); // loads a new quote by default
   // new quote when "..." button is pressed
@@ -26,15 +23,14 @@ $(document).ready(function(){
     });
   }
 
-  // returns a url for a Twitter post
-  // Known issue: not all extended ASCII char encode correctly (e.g. ++ in "C++")
-  // a ; will pass through the encodeURI function & cut short the tweet
+  // opens a pre-formated Twitter post of a %xx encoded quote
   function twitterQuery(){
     var query;
     var base = "https://twitter.com/intent/tweet?text=";
     var quote = $(".quote").text();
     var name = $(".name").text();
-    var endBit = (140 - (name.length + 6));
+    var endBit = (140 - (name.length + 6)); // last index for a str splice
+    // quote-name strings are reduced to 140 characters
     if ((quote.length + name.length) >= 138) {
       quote = quote.slice(0, endBit);
       query = ('"' + quote + '..." ' + name);
@@ -42,56 +38,7 @@ $(document).ready(function(){
     else {
       query = ('"' + quote + '" ' + name);
     }
-    // var query = encodeURI(quote + " " + name);
-    // var tweet = base + query;
-    window.open(base + encodeURI(query));
+    window.open(base + encodeURIComponent(query));
   }
 
 });
-
-
-
-
-
-
-// $(document).ready(function(){
-//   var endpoint = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
-//   $("#myBtn").click(function(){
-//     $("p.text").load(endpoint, function(responseTxt, statusTxt, xhr){
-//       console.log(statusTxt);
-//       if (statusTxt != "success"){
-//         console.log("Error: " + xhr.status + ": " + xhr.statusTxt);
-//       }
-//     });
-//   });
-// });
-
-
-// myBtn styling
-btn = document.getElementById('myBtn');
-
-
-// create an XMLHttpRequest object
-// var endpoint = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
-
-// function loadObj() {
-//   console.log('function started')
-//   var xhttp = new XMLHttpRequest();
-//   xhttp.onreadystatechange = function() {
-//     console.log('second function')
-//     if (this.readyState == 4 && this.status == 200){
-//       // write a function to parse data and assign to inner html
-//       console.log('inside if')
-//       arrangeQuote(this);
-//     }
-//     xhttp.open("GET", endpoint, true);
-//     xhttp.send();
-//   };
-// }
-// function arrangeQuote(xml){
-//   // use this to style & insert under state change condition
-//   var xmlObj = xml.responseXML;
-//   document.getElementById('text').innerHTML = 'HELLO WORLD';
-// }
-
-// });

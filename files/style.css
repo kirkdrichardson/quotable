@@ -1,50 +1,74 @@
 body {
-  background-color: bisque;
   margin: 1%;
   padding: 1%;
   overflow: hidden;
+  /* remainder of code block formatted here: http://colorzilla.com/gradient-editor/#7d7e7d+0,7d7e7d+2,7d7e7d+2,0e0e0e+24,7d7e7d+78,7d7e7d+99 */
+  background: #0e0e0e; /* Old browsers */
+background: -moz-linear-gradient(top, #0e0e0e 7%, #7d7e7d 48%, #0e0e0e 95%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #0e0e0e 7%,#7d7e7d 48%,#0e0e0e 95%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #0e0e0e 7%,#7d7e7d 48%,#0e0e0e 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  border: solid 2px burlywood;
-  height: 100%;
-  width: 100%;
+  margin: auto;
+  width: 70vw;
   text-align: center;
 }
 
+/* Computer screen & base*/
+
 .name {
   float: right;
-  margin: 3em .9em .9em .9em;
+  margin: 1em .9em .9em .9em;
   font-size: .5em;
   font-family: cursive;
 
 }
 
 .board {
-  margin: 2%;
+  float: top;
+  margin: 0 auto;
   height: 60vh;
+  width: 100%;
   overflow: hidden;
-  background-color: #4b634f;
+  background-color: #383838;
   border-radius: 5%;
   border-style: ridge;
   border-bottom-style: groove;
-  border-color: #bf9c6e  #bf9c6e #7b6b6b #bf9c6e;
-  border-width: 1em 1em 2em 1em;
+  border-color: #372b56  #372b56  #372b56  #372b56 ;
+  border-width: 1em 1em 3em 1em;
 }
 
 .text {
   display: inline-block;
   margin: 1%;
-  font-size: 3em;
-  color: #e0c8c8;
+  font-size: 2.6em;
+  font-family: monospace;
+  color: #9aad9c;
 }
 
+
+#base {
+	border-bottom: 100px solid #2e2654;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 15%;
+}
+
+/* Button Elements */
+
 .button {
+  clear: both;
   display: block;
-  margin: 0 auto 2%;
+  margin: 2% auto 2%;
   padding: 1em 3em 1em 3em;
+  width:15vw;
+  height: 10vh;
   background-color: #499c49;
   border-radius: 5%;
   color:  #e0c8c8;
@@ -56,8 +80,11 @@ body {
   font-size: xx-large;
 }
 
-.button:hover {
+#quoteBtn:hover {
   background-color: #1c881c;
+}
+#tweetBtn:hover {
+  background-color: blue;
 }
 
 .button:active {
@@ -66,6 +93,7 @@ body {
 
 #tweetBtn {
   background-color: #4275e8;
+
 }
 
 /* Media Queries to the window */
@@ -86,6 +114,10 @@ body {
 @media screen and (max-width: 400px) {
   .text {font-size: 1.5em;}
 }
+@media screen and (max-width: 240px) {
+  .text {font-size: 1.4em;}
+}
+
 
 /* Font
 @font-face {
