@@ -1,12 +1,11 @@
 
-# **Quotable** <br>
-### A quote machine for condensed wisdom consumers
+# **Quotable**
 <br>
----
-
+### An API machine that generates quotes related to programming & formats tweets.
 <br>
 <br>
+<br> 
 
-Queries the Wordpress JSON API to provide random quotes. 
-
-*Endopoint*: `https://quotesondesign.com/api-v4-0/`
+*Technologies*: HTML/CSS, Javascript, JQuery
+<br>
+*Endopoint*: `http://quotes.stormconsultancy.co.uk/random.json`
