@@ -2,7 +2,9 @@ body {
   margin: 1%;
   padding: 1%;
   overflow: hidden;
-  background-color: hsl(30%, 27%, 10%);
+  background-color: #230923;
+  background-color: hsl(303, 27%, 10%);
+  overflow: auto;
 }
 
 .container {
@@ -18,8 +20,8 @@ body {
 .name {
   float: right;
   margin: 1em .9em .9em .9em;
-  font-size: .5em;
   font-family: cursive;
+  font-size: .5em;
 }
 
 .board {
@@ -58,6 +60,7 @@ body {
   margin: 2% auto 2%;
   width:15vw;
   height: 10vh;
+  min-height: 30px;
   background-color: #4a1154;
   border-radius: 5%;
   color:  #e0c8c8;
@@ -89,7 +92,7 @@ body {
   transform: translateY(8px);
 }
 
-/* viewport based media queries */
+/* media queries for different viewports */
 @media screen and (max-width: 1300px) {
   .text {font-size: 2em;}
   #elipses {font-size: larger;}
@@ -151,4 +154,14 @@ body {
   #elipses {font-size: 1em;}
   #tweetBtn {font-size: .6em;}
   #tweetBtn:hover {font-size: .7em;}
+}
+
+@media screen and (max-height: 470px) {
+  .text {font-size: 1.4em;}
+  .button:active {transform: translateY(2px);}
+  #quoteBtn {font-size: .6em}
+  #quoteBtn:hover {font-size: .7em}
+  #elipses {font-size: 1em;}
+  #tweetBtn {font-size: .9em;}
+  #tweetBtn:hover {font-size: 1em;}
 }
