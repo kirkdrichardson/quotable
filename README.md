@@ -1,7 +1,9 @@
 
 # **Quotable**
 <br>
+
 ### An API machine that generates quotes related to programming & formats tweets.
+---
 <br>
 <br>
 <br> 
