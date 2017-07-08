@@ -9,4 +9,4 @@
 
 *Technologies*: HTML/CSS, Javascript, JQuery
 <br>
-*Endopoint*: `http://quotes.stormconsultancy.co.uk/random.json`
+*Endpoint*: `http://quotes.stormconsultancy.co.uk/random.json`
