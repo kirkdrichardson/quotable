@@ -4,14 +4,13 @@ $(document).ready(function(){
   $("#quoteBtn").click(function() {
     getQuote();
   });
-  // prepares a quote to be posted as a tweet
+  // opens a new window with a suggested tweet
   $("#tweetBtn").click(function() {
     twitterQuery();
   })
   //#######################################//
   // ####    Function Definitions    #### //
   //#####################################//
-
   // queries the API (endpoint) for a new quote & wraps its properties in <p> elements
   function getQuote() {
     var endpoint = "http://quotes.stormconsultancy.co.uk/random.json";
@@ -22,8 +21,7 @@ $(document).ready(function(){
       )
     });
   }
-
-  // opens a pre-formated Twitter post of a %xx encoded quote
+  // opens a pre-formated Twitter post by %xx encoding the quote
   function twitterQuery(){
     var query;
     var base = "https://twitter.com/intent/tweet?text=";

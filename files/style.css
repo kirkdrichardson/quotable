@@ -2,31 +2,24 @@ body {
   margin: 1%;
   padding: 1%;
   overflow: hidden;
-  /* remainder of code block formatted here: http://colorzilla.com/gradient-editor/#7d7e7d+0,7d7e7d+2,7d7e7d+2,0e0e0e+24,7d7e7d+78,7d7e7d+99 */
-  background: #0e0e0e; /* Old browsers */
-background: -moz-linear-gradient(top, #0e0e0e 7%, #7d7e7d 48%, #0e0e0e 95%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #0e0e0e 7%,#7d7e7d 48%,#0e0e0e 95%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #0e0e0e 7%,#7d7e7d 48%,#0e0e0e 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
-
+  background-color: hsl(30%, 27%, 10%);
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
+  margin: 2% auto;
   width: 70vw;
   text-align: center;
+  color: #9aad9c;
 }
 
 /* Computer screen & base*/
-
 .name {
   float: right;
   margin: 1em .9em .9em .9em;
   font-size: .5em;
   font-family: cursive;
-
 }
 
 .board {
@@ -34,94 +27,128 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', end
   margin: 0 auto;
   height: 60vh;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   background-color: #383838;
   border-radius: 5%;
   border-style: ridge;
   border-bottom-style: groove;
-  border-color: #372b56  #372b56  #372b56  #372b56 ;
+  border-color: #372b56;
   border-width: 1em 1em 3em 1em;
 }
 
 .text {
   display: inline-block;
   margin: 1%;
-  font-size: 2.6em;
+  font-size: 2.5em;
   font-family: monospace;
-  color: #9aad9c;
 }
 
-
 #base {
-	border-bottom: 100px solid #2e2654;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	height: 0;
-	width: 15%;
+  border-bottom: 8vw solid #372b56;
+  border-left: 4vw solid transparent;
+  border-right: 4vw solid transparent;
+  height: 0;
+  width: 15%;
 }
 
 /* Button Elements */
-
 .button {
   clear: both;
   display: block;
   margin: 2% auto 2%;
-  padding: 1em 3em 1em 3em;
   width:15vw;
   height: 10vh;
-  background-color: #499c49;
+  background-color: #4a1154;
   border-radius: 5%;
   color:  #e0c8c8;
   font-size: larger;
   font-family: sans-serif;
+  border-color: rgba(173, 148, 148, 0.58)
 }
 
 #elipses {
   font-size: xx-large;
 }
 
-#quoteBtn:hover {
-  background-color: #1c881c;
+#tweetBtn {
+  background-color: #173477;
+  font-size: 2em;
 }
+
+#quoteBtn:hover {
+  background-color: #3b0b44;
+  font-size: 2em;
+}
+
 #tweetBtn:hover {
-  background-color: blue;
+  background-color: #141475;
+  font-size: 3em;
 }
 
 .button:active {
   transform: translateY(8px);
 }
 
-#tweetBtn {
-  background-color: #4275e8;
-
-}
-
-/* Media Queries to the window */
-@media screen and (max-width: 830px) {
+/* viewport based media queries */
+@media screen and (max-width: 1300px) {
   .text {font-size: 2em;}
+  #elipses {font-size: larger;}
+  .button {width:12vw; height: 7vh; font-size: medium;}
+  #quoteBtn {font-size: .9em;}
+  #quoteBtn:hover {font-size: 1.1em;}
+  #tweetBtn {font-size: 1.4em;}
+  #tweetBtn:hover {font-size: 1.6em;}
 }
 
-@media screen and (max-width: 480px) {
-    .text {font-size: 1.8em;}
-    .board {border-width: .5em .5em 1em .5em;}
-    .button {
-      padding: .5em 1.5em .5em 1.5em;
-      font-size: small;
-      }
-    #elipses {font-size: medium;}
+@media screen and (max-width: 830px) {
+  .board {height: 45vh;}
+  .text {font-size: 1.6em;}
+  .button {font-size: .8em; height: 6vh;}
+  #quoteBtn {font-size: .7em;}
+  #quoteBtn:hover {font-size: .85em;}
+  #tweetBtn {font-size: 1.1em;}
+  #tweetBtn:hover {font-size: 1.2;}
 }
 
-@media screen and (max-width: 400px) {
-  .text {font-size: 1.5em;}
-}
-@media screen and (max-width: 240px) {
+@media screen and (max-width: 650px) {
+  .board {border-width: .8em .8em 1.3em .8em;}
   .text {font-size: 1.4em;}
+  .button {padding: .5em 1.5em .5em 1.5em;}
+  #quoteBtn {font-size: .6em}
+  #quoteBtn:hover {font-size: .7em;}
+  #elipses {font-size: 1em;}
+  #tweetBtn:hover {font-size: 1.2em;}
 }
 
-
-/* Font
-@font-face {
-  font-family: chalk;
-  src: url("SqueakyChalkSound.woff");
+@media screen and (max-width: 540px) {
+  .board {height: 43vh;}
+  .text {font-size: 1.35em;}
+  #quoteBtn {font-size: .5em}
+  #quoteBtn:hover {font-size: .6em;}
+  #tweetBtn {font-size: .9em;}
+  #tweetBtn:hover {font-size: 1em;}
 }
-*/
+
+@media screen and (max-width: 470px) {
+  .board {height: 40vh;}
+  .text {font-size: 1.35em;}
+  .button {width: 15vw; height: 4.5vh;}
+  #quoteBtn {font-size: .4em}
+  #quoteBtn:hover {font-size: .5em;}
+  #tweetBtn {font-size: .8em;}
+  #tweetBtn:hover {font-size: .9em;}
+}
+
+@media screen and (max-width: 380px) {
+  .board {height: 35vh;}
+  .text {font-size: 1.2em;}
+}
+
+@media screen and (max-width: 300px) {
+  .board {height: 25vh;}
+  .text {font-size: 1em;}
+  .button {width: 20vw; height: 3vh;}
+  #elipses {font-size: 1em;}
+  #tweetBtn {font-size: .6em;}
+  #tweetBtn:hover {font-size: .7em;}
+}
